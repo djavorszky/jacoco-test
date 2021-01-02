@@ -1,21 +1,22 @@
 import org.junit.jupiter.api.Test;
 
-import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class StringUtilTest {
 
   @Test
   void testIsPalindrome_emptyString() {
-    assertThat(StringUtil.isPalindrome("")).isFalse();
+    assertFalse(StringUtil.isPalindrome(""));
   }
 
   @Test
   void testIsPalindrome_notPalinodrome() {
-    assertThat(StringUtil.isPalindrome("no")).isFalse();
+    assertFalse(StringUtil.isPalindrome("no"));
   }
 
   @Test
   void testIsPalindrome() {
-    assertThat(StringUtil.isPalindrome("racecar")).isTrue();
+    assertTrue(StringUtil.isPalindrome("racecar"));
   }
 }
